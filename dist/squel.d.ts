@@ -552,6 +552,7 @@ declare namespace squel {
      * An alias may also be specified for this field.
      */
     field(name: string | BaseBuilder, alias?: string, options?: FieldOptions): this;
+    removeField(name: string | BaseBuilder, alias?: string, options?: FieldOptions): this;
 
     /**
      * Add the given fields to the final result set.
@@ -562,6 +563,7 @@ declare namespace squel {
      * Internally this method simply calls the field() method of this block to add each individual field.
      */
     fields(fields: {[field: string]: string} | string[], options?: FieldOptions): this;
+    removeAllFields(): this;
   }
 
   interface GetFieldMixin {
