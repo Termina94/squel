@@ -575,6 +575,7 @@ declare namespace squel {
      * @param options Additional options. Default is `null`.
      */
     field(name: string | BaseBuilder, alias?: string, options?: FieldOptions): this;
+    removeField(name: string | BaseBuilder, alias?: string, options?: FieldOptions): this;
 
     /**
      * Set fields to select data for.
@@ -583,6 +584,7 @@ declare namespace squel {
      * @param options Additional options. Default is `null`.
      */
     fields(fields: {[field: string]: string} | string[], options?: FieldOptions): this;
+    removeAllFields(): this;
   }
 
   /**
